@@ -6,17 +6,17 @@ public class Main {
 
 	public static void main(String[] args) {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		//BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
 		try {
 			int N = Integer.parseInt(br.readLine());
 			Calculation c = new Calculation();
 			int count = c.calc(N);
 			
-			//bw.append(count + "");
+			bw.append(count + "");
 			
-			//bw.close();
-			//br.close();
+			bw.close();
+			br.close();
 			
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
@@ -34,7 +34,6 @@ class Calculation{
 	
 	public int calc(int n) {
 		if(d[n] > 0) {
-			System.out.println("*");
 			return d[n];
 		}
 		if(n == 1) {
